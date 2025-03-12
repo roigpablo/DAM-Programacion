@@ -1,11 +1,10 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        final double PI = 3.1416; // constante de tipo double
-        final int EDAD_MAXIMA = 100; // constante de tipo entero
 
-        System.out.println("El valor de PI es: " + PI);
-        System.out.println("La edad máxima permitida es: " + EDAD_MAXIMA);
-        System.out.println("--------------");
+        //Importo el scanner para usarlo más adelante, lo había importado en el ejercicio 8, pero como lo usaba más adelante lo he puesto al principio para que quede claro
+        Scanner scanner = new Scanner(System.in);
 
         //1️⃣ Crea una constante llamada GRAVEDAD con el valor 9.81 y muestra su valor por pantalla.
         final double GRAVEDAD = 9.81;
@@ -60,15 +59,37 @@ public class Main {
         System.out.println("--------------");
 
         //8️⃣ Crea un programa que pida al usuario dos números y evalúe si son múltiplos (num1 % num2 == 0).
-
+        System.out.println("Hola bonito, introduce el primer número: ");
+        float PrimerNumero = scanner.nextFloat();
+        System.out.println("Porfa, introduce el segundo número: ");
+        float SegundoNumero = scanner.nextFloat();
+        float Resto = PrimerNumero % SegundoNumero;
+        if (Resto == 0){
+            System.out.println("El resto es 0. Por lo tanto son múltiplos");
+        } else {
+            System.out.println("No son múltiplos, El resto es: " + Resto);
+        }
         System.out.println("--------------");
+
 
         //9️⃣ Escribe un código que reciba un número e indique si es par o impar usando el operador módulo (%).
-
+        System.out.println("Hola chico listo, dime el número y te diré si es par o impar: ");
+        float PrimerNumeroParImpar = scanner.nextFloat();
+        float RestoParImpar = PrimerNumeroParImpar % 2;
+        if (RestoParImpar == 0){
+            System.out.println("El numero es par");
+        } else {
+            System.out.println("El numero es impar");
+        }
         System.out.println("--------------");
 
-        //🔟 Define una constante TASA_CAMBIO con el valor 1.12 (dólar a euro). Convierte una cantidad de dólares ingresada por el usuario a euros.
 
+        //🔟 Define una constante TASA_CAMBIO con el valor 1.12 (dólar a euro). Convierte una cantidad de dólares ingresada por el usuario a euros.
+        final double TASA_CAMBIO = 1.12;
+        System.out.println("Hola persona rica, cuántos euros quieres convertir?: ");
+        double euros = scanner.nextDouble();
+        double dolares = euros * TASA_CAMBIO;
+        System.out.println(euros + " € convertido a dólares son: " + dolares + " $");
         System.out.println("--------------");
 
     }
