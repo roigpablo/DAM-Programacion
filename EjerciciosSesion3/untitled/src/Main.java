@@ -27,29 +27,46 @@ public class Main {
         System.out.println("Es mayor de edad? " + (edad >= 18));
         System.out.println("--------------");
 
-        //4️⃣ Crea un programa que reciba dos números y rdetermine cuál es mayo, menor o si son iguales.
+        //4️⃣ Crea un programa que reciba dos números y determine cuál es mayor, menor o si son iguales.
         int numero1 = 10;
         int numero2 = 4;
-        System.out.println("¿x es igual a y? " + (numero1 == numero2));
-        System.out.println("¿x es diferente de y? " + (numero1 != numero2));
-        System.out.println("¿x es mayor que y? " + (numero1 > numero2));
-        System.out.println("¿x es menor que y? " + (numero1 < numero2));
+
+        if (numero1 > numero2){
+            System.out.println("El número 1 es MAYOR que el número 2");
+        }
+        else if (numero1 < numero2) {
+            System.out.println("El número 2 es MAYOR que el número 1");
+        } else if (numero1 == numero2) {
+            System.out.println("Los dos números introducidos son iguales");
+        }
+        System.out.println("--------------");
 
         //5️⃣ Escribe un programa que evalúe la siguiente expresión lógica: (5 > 3) && (10 < 20). ¿Cuál es el resultado?
-
+        System.out.println("El resultado de la expresión (5 > 3) && (10 < 20) es: " + ((5>3) && (10>20)));
         System.out.println("--------------");
         //6️⃣ Modifica el programa anterior y evalúa también (5 > 3) || (10 > 20). Explica los resultados obtenidos.
-
+        System.out.println("El resultado de la expresión (5 > 3) || (10 < 20) es: " + ((5>3) || (10>20)));
+        //En el programa anterior comparaba ambos resultados y daba FALSE, porque 5 es mayor que 3, pero 10 no es mayor que 20 entonces muestra un FALSE.
+        //En este programa, muestra TRUE porque al menos una de las dos comparaciones que se realizan se cumplen (TRUE).
         System.out.println("--------------");
+
         //7️⃣ Declara tres variables x = 10, y = 20, z = 30. Compara x + y con z utilizando operadores relacionales.
-
+        int x = 10, y = 20, z = 30;
+        System.out.println("¿X + Y es igual a Z? " + ((x+y) == z));
+        System.out.println("¿X + Y es diferente de Z? " + ((x+y) != z));
+        System.out.println("¿X + Y es mayor que Z? " + ((x+y) > z));
+        System.out.println("¿X + Y es menor que Z? " + ((x+y) < z));
+        //He cambiado los valores manualmente de X,Y,Z para ver que si cambian los valores, también cambia el valor del resultado.
         System.out.println("--------------");
+
         //8️⃣ Crea un programa que pida al usuario dos números y evalúe si son múltiplos (num1 % num2 == 0).
 
         System.out.println("--------------");
+
         //9️⃣ Escribe un código que reciba un número e indique si es par o impar usando el operador módulo (%).
 
         System.out.println("--------------");
+
         //🔟 Define una constante TASA_CAMBIO con el valor 1.12 (dólar a euro). Convierte una cantidad de dólares ingresada por el usuario a euros.
 
         System.out.println("--------------");
